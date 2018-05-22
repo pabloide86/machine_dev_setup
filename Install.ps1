@@ -1,7 +1,3 @@
-# Description: Boxstarter Script  
-# Author: Microsoft
-# Common dev settings for desktop app development
-
 Disable-UAC
 
 #--- Windows Features ---
@@ -18,8 +14,8 @@ Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 #--- Windows Subsystems/Features ---
-choco install -y Microsoft-Hyper-V-All -source windowsFeatures
-choco install -y Microsoft-Windows-Subsystem-Linux -source windowsfeatures
+#choco install -y Microsoft-Hyper-V-All -source windowsFeatures
+#choco install -y Microsoft-Windows-Subsystem-Linux -source windowsfeatures
 
 #--- Tools ---
 #choco install -y visualstudio2017community  # See this for install args: https://chocolatey.org/packages/VisualStudio2017Community
@@ -46,6 +42,7 @@ choco install -y winscp
 choco install -y greenshot
 choco install -y lessmsi
 choco install -y tortoisesvn
+choco install -y tortoisegit
 choco install -y baretail
 choco install -y postman
 
@@ -70,7 +67,14 @@ choco install -y golang
 choco install -y dotnetcore-sdk
 choco install -y ilspy
 choco install -y linqpad
+choco install -y sql-server-management-studio
+
+#--- oh-my-posh ---
+New-Item -ItemType Directory -Force -Path C:\repos\
+git clone https://github.com/powerline/fonts.git c:\repos\fonts
+.\c:\repos\fonts\install.ps1
+Install-Module -Name 'oh-my-posh'
 
 Enable-UAC
-Enable-MicrosoftUpdate
-Install-WindowsUpdate -acceptEula
+#Enable-MicrosoftUpdate
+#Install-WindowsUpdate -acceptEula
