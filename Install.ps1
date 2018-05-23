@@ -43,7 +43,7 @@ choco install -y greenshot
 choco install -y lessmsi
 choco install -y tortoisesvn
 choco install -y tortoisegit
-choco install -y baretail
+#choco install -y baretail
 choco install -y postman
 
 #--- Console Emulators ---
@@ -53,15 +53,15 @@ choco install -y hyper
 #--- Code Editors ---
 choco install -y vscode
 choco install -y sublimetext3
-choco install -y neovim
+#choco install -y neovim
 
 #--- Nodejs ---
 choco install -y nodejs-lts
 choco install -y yarn
-choco install -y mongodb
+#choco install -y mongodb
 
 #--- Golang ---
-choco install -y golang
+#choco install -y golang
 
 #--- dotnet ---
 choco install -y dotnetcore-sdk
@@ -70,10 +70,10 @@ choco install -y linqpad
 choco install -y sql-server-management-studio
 
 #--- oh-my-posh ---
-New-Item -ItemType Directory -Force -Path C:\repos\
-git clone https://github.com/powerline/fonts.git c:\repos\fonts
-.\c:\repos\fonts\install.ps1
-Install-Module -Name 'oh-my-posh'
+#New-Item -ItemType Directory -Force -Path C:\repos\
+#git clone https://github.com/powerline/fonts.git c:\repos\fonts
+#.\c:\repos\fonts\install.ps1
+#Install-Module -Name 'oh-my-posh'
 
 Enable-UAC
 #Enable-MicrosoftUpdate
