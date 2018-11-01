@@ -1,7 +1,8 @@
-Disable-UAC
-
 #--- Windows Features ---
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
+
+# Enable Dark mode
+Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
 
 #--- File Explorer Settings ---
 Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneExpandToCurrentFolder -Value 1
@@ -17,19 +18,14 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 #choco install -y Microsoft-Hyper-V-All -source windowsFeatures
 #choco install -y Microsoft-Windows-Subsystem-Linux -source windowsfeatures
 
-#--- Tools ---
-#choco install -y visualstudio2017community  # See this for install args: https://chocolatey.org/packages/VisualStudio2017Community
-
-# TODO: should pass install args to VS2017 to install additional options 
-
-
 #--- Browsers ---
 choco install -y googlechrome
 choco install -y firefox
 
 #--- Fonts ---
-choco install -y inconsolata
-# choco install -y ubuntu.font
+#choco install -y inconsolata
+#choco install -y ubuntu.font
+choco install -y firacode
 
 #--- Tools ---
 choco install -y sysinternals
@@ -41,10 +37,12 @@ choco install -y freecommander-xe.install
 choco install -y winscp
 choco install -y greenshot
 choco install -y lessmsi
-choco install -y tortoisesvn
+#choco install -y tortoisesvn
 choco install -y tortoisegit
 #choco install -y baretail
 choco install -y postman
+choco install -y telegram
+choco install -y skype
 
 #--- Console Emulators ---
 choco install -y cmder
@@ -53,15 +51,20 @@ choco install -y hyper
 #--- Code Editors ---
 choco install -y vscode
 choco install -y sublimetext3
-#choco install -y neovim
+choco install -y neovim
+choco install -y visualstudio2017community --package-parameters "--add Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended --passive --locale en-US"
 
 #--- Nodejs ---
 choco install -y nodejs-lts
 choco install -y yarn
+
+#--- Databases ---
 #choco install -y mongodb
+#choco install -y mariadb
+#choco install -y neo4j-community
 
 #--- Golang ---
-#choco install -y golang
+choco install -y golang
 
 #--- dotnet ---
 choco install -y dotnetcore-sdk
@@ -73,8 +76,13 @@ choco install -y sql-server-management-studio
 #New-Item -ItemType Directory -Force -Path C:\repos\
 #git clone https://github.com/powerline/fonts.git c:\repos\fonts
 #.\c:\repos\fonts\install.ps1
-#Install-Module -Name 'oh-my-posh'
+Install-Module -Name 'oh-my-posh'
 
-Enable-UAC
 #Enable-MicrosoftUpdate
 #Install-WindowsUpdate -acceptEula
+
+# TODO:
+#    [] Setup oh-my-posh in powershell profile
+#    [] Setup hyper properties
+#    [] Setup .vimrc file
+#    [] Set chrome as default
