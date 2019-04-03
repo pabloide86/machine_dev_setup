@@ -1,6 +1,12 @@
 #--- Windows Features ---
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
 
+#--- Set keyboard layout to en-US International
+$languageList = New-WinUserLanguageList en-US
+$languageList[0].InputMethodTips.Clear()
+$languageList[0].InputMethodTips.Add('0409:00020409')
+Set-WinUserLanguageList $languageList -Force
+
 # Enable Dark mode
 Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
 
