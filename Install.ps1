@@ -49,16 +49,19 @@ choco install -y tortoisegit
 choco install -y postman
 choco install -y telegram
 choco install -y skype
+choco install -y nimbletext
+choco install -y nimbleset
 
 #--- Console Emulators ---
-choco install -y cmder
-choco install -y hyper
+#choco install -y cmder
+#choco install -y hyper
+choco install -y terminus
 
 #--- Code Editors ---
 choco install -y vscode
 choco install -y sublimetext3
 choco install -y neovim
-choco install -y visualstudio2017community --package-parameters "--add Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended --passive --locale en-US"
+choco install -y visualstudio2019community --package-parameters "--add Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended --passive --locale en-US"
 
 #--- Nodejs ---
 choco install -y nodejs-lts
@@ -76,7 +79,8 @@ choco install -y golang
 choco install -y dotnetcore-sdk
 choco install -y ilspy
 choco install -y linqpad
-choco install -y sql-server-management-studio
+#choco install -y sql-server-management-studio
+choco install -y azure-data-studio
 
 #--- oh-my-posh ---
 #New-Item -ItemType Directory -Force -Path C:\repos\
@@ -84,11 +88,13 @@ choco install -y sql-server-management-studio
 #.\c:\repos\fonts\install.ps1
 Install-Module -Name 'oh-my-posh'
 
+Add-Content $profile "Import-Module posh-git"
+Add-Content $profile "Import-Module oh-my-posh"
+Add-Content $profile "Set-Theme Agnoster"
+
 #Enable-MicrosoftUpdate
 #Install-WindowsUpdate -acceptEula
 
 # TODO:
-#    [] Setup oh-my-posh in powershell profile
-#    [] Setup hyper properties
 #    [] Setup .vimrc file
 #    [] Set chrome as default
