@@ -51,7 +51,7 @@ function killproc($imageName) { taskkill /f /im $imageName /t }
 function glog() { git log --oneline -10 }
 function gs() { git status }
 function gds() { git diff --staged }
-function gca(msg) { git commit -m -a msg }
+function gca($msg) { git commit -m -a $msg }
 function grev() { git reset --hard HEAD; git clean -fdx; }
 
 # Initialize a git directory with a readme
