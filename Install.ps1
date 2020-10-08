@@ -86,11 +86,14 @@ choco install -y azure-data-studio
 #New-Item -ItemType Directory -Force -Path C:\repos\
 #git clone https://github.com/powerline/fonts.git c:\repos\fonts
 #.\c:\repos\fonts\install.ps1
-Install-Module -Name 'oh-my-posh'
 
-Add-Content $profile "Import-Module posh-git"
-Add-Content $profile "Import-Module oh-my-posh"
-Add-Content $profile "Set-Theme Agnoster"
+#Still in beta
+Install-Module -Name 'oh-my-posh' -AllowPrerelease
+
+# Moved this to its own file
+#Add-Content $profile "Import-Module posh-git"
+#Add-Content $profile "Import-Module oh-my-posh"
+#Add-Content $profile "set-poshprompt -Theme "C:\Users\Pablo\Documents\PowerShell\Modules\oh-my-posh\3.8.0\themes\agnoster.json""
 
 #Enable-MicrosoftUpdate
 #Install-WindowsUpdate -acceptEula
