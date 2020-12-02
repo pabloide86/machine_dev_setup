@@ -8,3 +8,10 @@ Inspired by:
 # Reminder:
 Set the execution policy in powershell before running the script
 ```Set-ExecutionPolicy Unrestricted```
+
+# TODOs:
+- [ ] Create setup for Windows Terminal
+  - [ ] Install PowerShell Core
+  - [ ] Install new Windows Terminal
+  - [ ] Setup cool prompt 😎 (install posh-git + oh-my-posh3 + Terminal-Icons + any other cool module)
+  - [ ] Setup custom profile
