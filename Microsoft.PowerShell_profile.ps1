@@ -46,6 +46,16 @@ function currdir { (pwd).Path | scb }
 function shrug { "¯\_(ツ)_/¯" | scb }
 function fliptable { "(┛ಠ_ಠ)┛彡┻━┻" | scb }
 function killproc($imageName) { taskkill /f /im $imageName /t }
+function hist($pattern) {
+    if(-not ($pattern)) {
+        Get-History -Count 20
+    } else {
+        Get-History | Select-String -Pattern $pattern
+    }
+}
+function rhist($num) {
+    Invoke-History $num
+}
 
 # Git shortcuts
 function glog() { git log --oneline -10 }
