@@ -6,6 +6,12 @@
 # Apps to install:
 brew install iterm2
 brew install visual-studio-code
+brew install azure-data-studio
+brew install font-fira-code
+brew install neovim
+brew install fzf
+brew install the_silver_searcher
+
 brew install docker
 brew install postman
 brew install telegram
@@ -14,6 +20,10 @@ brew install git
 brew install node
 brew install yarn
 brew install notion
+
+brew install background-music
+brew install obs
+brew install vlc
 
 # Other tools:
 
