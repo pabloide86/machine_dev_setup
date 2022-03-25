@@ -25,6 +25,12 @@ brew install background-music
 brew install obs
 brew install vlc
 
+# Barrier is a fork of synergy (for sharing keyboard and mouse)
+brew install barrier
+# TODO:
+# cd /Users/USERNAME/Library/Application Support/barrier/SSL
+# openssl req -new -x509 -sha256 -days 999 -nodes -out Barrier.pem -keyout Barrier.pem
+
 # Other tools:
 
 # npm global packages
