@@ -51,6 +51,7 @@ choco install -y telegram
 choco install -y skype
 choco install -y nimbletext
 choco install -y nimbleset
+choco install -y barrier
 
 #--- Console Emulators ---
 #choco install -y cmder
