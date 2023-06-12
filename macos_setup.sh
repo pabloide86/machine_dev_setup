@@ -7,10 +7,12 @@
 brew install iterm2
 brew install visual-studio-code
 brew install azure-data-studio
+brew install --cask dbeaver-community
 brew install font-fira-code
 brew install neovim
 brew install fzf
 brew install the_silver_searcher
+brew install tmux
 
 brew install docker
 brew install postman
@@ -21,7 +23,7 @@ brew install node
 brew install yarn
 brew install notion
 
-brew install background-music
+#brew install background-music
 brew install obs
 brew install vlc
 
@@ -32,6 +34,9 @@ brew install barrier
 # openssl req -new -x509 -sha256 -days 999 -nodes -out Barrier.pem -keyout Barrier.pem
 
 # Other tools:
+
+# nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # npm global packages
 npm i -g babel-cli
