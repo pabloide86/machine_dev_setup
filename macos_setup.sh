@@ -6,13 +6,13 @@
 # Apps to install:
 brew install iterm2
 brew install visual-studio-code
-brew install azure-data-studio
 brew install --cask dbeaver-community
 brew install font-fira-code
 brew install neovim
 brew install fzf
 brew install the_silver_searcher
 brew install tmux
+brew install --cask marta # norton-commander style
 
 brew install docker
 brew install postman
@@ -58,3 +58,35 @@ brew install zsh-syntax-highlighting
 defaults write com.apple.Finder AppleShowAllFiles true
 killall Finder
 
+# Install vscode extensions
+code --install-extension catppuccin.catppuccin-vsc-icons
+code --install-extension chakrounanas.turbo-console-log
+code --install-extension codeium.codeium
+code --install-extension correiagithubgruvbox.correia-github-gruvbox
+code --install-extension crystal-spider.jsdoc-generator
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
+code --install-extension franciscosilva.gruber-darker
+code --install-extension graphql.vscode-graphql
+code --install-extension graphql.vscode-graphql-syntax
+code --install-extension hediet.vscode-drawio
+code --install-extension huynhduong.nvtokyo-theme
+code --install-extension liamhammett.inline-parameters
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-vscode-remote.remote-containers
+code --install-extension ms-vscode-remote.remote-ssh
+code --install-extension ms-vscode-remote.remote-ssh-edit
+code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
+code --install-extension ms-vscode.live-server
+code --install-extension ms-vscode.remote-explorer
+code --install-extension ms-vscode.remote-server
+code --install-extension ms-vscode.test-adapter-converter
+code --install-extension ms-vsliveshare.vsliveshare
+code --install-extension orta.vscode-jest
+code --install-extension pomdtr.excalidraw-editor
+code --install-extension qufiwefefwoyn.inline-sql-syntax
+code --install-extension ryanluker.vscode-coverage-gutters
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension vscodevim.vim
+code --install-extension wix.vscode-import-cost
